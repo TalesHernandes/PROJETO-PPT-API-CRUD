@@ -1,6 +1,6 @@
 "use client";
 
-import CrudTabelaEmp from "./components/CrudTabelaEmp.jsx"
+import BotaoMostrar from "./components/BotaoMostrar.jsx"
 
 export default function Home() {
   return (
@@ -20,19 +20,7 @@ export default function Home() {
           <div className="tabelaUP">
             <h3> Selecione um de nossos sistemas: </h3>
           </div>
-          <button>
-            <img src="./imagens/user.png" alt="logoEmpregado"/>
-            Nossos Empregados
-          </button>
-          <button>
-            <img src="./imagens/user.png" alt="logoEmpregado"/>
-            Países Que Operamos
-          </button>
-          <button>
-            <img src="./imagens/user.png" alt="logoEmpregado"/>
-            Cidades Que Operamos
-          </button>
-          <CrudTabelaEmp/>
+          <BotaoMostrar/>
         </section>
       </div>
     </div>

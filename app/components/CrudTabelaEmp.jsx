@@ -15,12 +15,12 @@ const CrudTabelaEmp = () => {
 
   const handleEditar = (id) => {
     // Implemente a lógica de edição aqui
-    console.log(`Editar empregado com ID ${id}`);
+    console.log(`Editar Empregado com ID ${id}`);
   };
 
   return (
     <table className="tabelacrud">
-        <thead>
+        <thead className="tabelacrudhead">
             <tr>
                 <th>ID</th>
                 <th>Nome</th>
@@ -37,8 +37,8 @@ const CrudTabelaEmp = () => {
                 <td>{empregado.cargo}</td>
                 <td>{empregado.salario}</td>
                 <td>
-                    <button onClick={() => handleEditar(empregado.id)} className="Editar">Editar</button>
-                    <button onClick={() => handleExcluir(empregado.id)}>Excluir</button>
+                    <button onClick={() => handleEditar(empregado.id)}> <img src="./imagens/editarsimbolo.png"/> </button>
+                    <button onClick={() => handleExcluir(empregado.id)}> <img src="./imagens/removersimbolo.png"/> </button>
                 </td>
             </tr>
             ))}
