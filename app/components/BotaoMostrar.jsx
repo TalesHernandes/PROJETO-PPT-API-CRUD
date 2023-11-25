@@ -16,7 +16,7 @@ const BotaoMostrar = () => {
   };
 
   return (
-    <div>
+    <div className="divMaior">
       <div className="botaoMostrar">
         <button onClick={() => mostrarTabela("empregados")} >
           <img src="./imagens/user.png" alt="logoEmpregado"/>
