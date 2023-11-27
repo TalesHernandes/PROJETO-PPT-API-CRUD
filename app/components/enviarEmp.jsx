@@ -27,8 +27,12 @@ const FormularioEmpPOST = () => {
 
     const dadosResposta = await resposta.json();
     console.log(dadosResposta);
-    window.alert('Cadastrado com sucesso!')
-    window.location.replace('/')
+    if (res.ok) {
+      window.location.replace('/')
+  } else {
+      console.error('Erro ao atualizar o país');
+  }
+    
   };
 
   return (

@@ -16,6 +16,10 @@ const ListaEmpregados = () => {
       fetchEmpregados();
     }, []);
 
+    const handleEditar = (id) => {
+      router.push(`/editarEmp?id=${id}`);
+    };
+
     const handleExcluir = async (id) => {
         const res = await fetch(`https://app-projeto-pppt.onrender.com/empregados/${id}`, {
           method: 'DELETE',
@@ -37,7 +41,7 @@ const ListaEmpregados = () => {
           <td>{empregrado.cargo}</td>
           <td>{empregrado.salario}</td>
           <td>
-            <button onClick={() => handleEditar(empregrado)}> <img src="./imagens/editarsimbolo.png"/> </button>
+            <button onClick={() => handleEditar(empregrado.id)}> <img src="./imagens/editarsimbolo.png"/> </button>
             <button onClick={() => handleExcluir(empregrado.id)}> <img src="./imagens/removersimbolo.png"/> </button>
           </td>
         </tr>

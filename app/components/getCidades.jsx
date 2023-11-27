@@ -16,6 +16,10 @@ const ListaCidades = () => {
       fetchCidades();
     }, []);
 
+    const handleEditar = (id) => {
+      router.push(`/editarCidade?id=${id}`);
+    };
+
     const handleExcluir = async (id) => {
         const res = await fetch(`https://app-projeto-pppt.onrender.com/cidades/${id}`, {
           method: 'DELETE',
@@ -38,7 +42,7 @@ const ListaCidades = () => {
           <td>{cidade.pais}</td>
           <td>{cidade.populacao}</td>
           <td>
-            <button onClick={() => handleEditar(cidade)}> <img src="./imagens/editarsimbolo.png"/> </button>
+            <button onClick={() => handleEditar(cidade.id)}> <img src="./imagens/editarsimbolo.png"/> </button>
             <button onClick={() => handleExcluir(cidade.id)}> <img src="./imagens/removersimbolo.png"/> </button>
           </td>
         </tr>
