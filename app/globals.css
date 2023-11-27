@@ -50,7 +50,6 @@ body,
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-
 }
 
 .desc {
@@ -71,6 +70,31 @@ body,
 .desc > img {
   width: 60px;
   margin-right: 20px;
+}
+
+.buttons {
+  padding-top: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 140px;
+  color: var(--colorFont);
+  text-shadow:
+    -1px -2px 0px #000000,
+    -1px 2px 0px #000000,
+    1px -2px 0px #000000,
+    1px 2px 0px #000000;
+}
+
+.buttons a {
+  border: none;
+  height: 60px;
+  width: 60px;
+}
+
+.add {
+  background-image: url(add.png);
+  background-size: cover;
 }
 
 /* Estilo para o campo das tabelas  */
